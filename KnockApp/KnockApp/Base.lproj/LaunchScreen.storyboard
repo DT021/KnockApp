@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
+                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingImage318.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="cYX-Tv-t0O">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cYX-Tv-t0O" secondAttribute="trailing" id="3c2-mp-oLX"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="cYX-Tv-t0O" secondAttribute="bottom" id="GIW-SA-SmW"/>
+                            <constraint firstItem="cYX-Tv-t0O" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="IG4-RT-44X"/>
+                            <constraint firstItem="cYX-Tv-t0O" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="WJO-Nz-4B0">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="cYX-Tv-t0O" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="Xgy-S0-dwa">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="cYX-Tv-t0O" secondAttribute="trailing" id="l1q-LG-guC">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-20"/>
+                            </constraint>
+                            <constraint firstItem="cYX-Tv-t0O" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="pLT-az-ZHA"/>
+                            <constraint firstItem="cYX-Tv-t0O" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="vNd-w2-JFE"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="cYX-Tv-t0O"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="3c2-mp-oLX"/>
+                                <exclude reference="IG4-RT-44X"/>
+                                <exclude reference="WJO-Nz-4B0"/>
+                                <exclude reference="Xgy-S0-dwa"/>
+                                <exclude reference="l1q-LG-guC"/>
+                                <exclude reference="pLT-az-ZHA"/>
+                                <exclude reference="vNd-w2-JFE"/>
+                                <exclude reference="GIW-SA-SmW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="cYX-Tv-t0O"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="3c2-mp-oLX"/>
+                                <include reference="IG4-RT-44X"/>
+                                <exclude reference="WJO-Nz-4B0"/>
+                                <exclude reference="Xgy-S0-dwa"/>
+                                <exclude reference="l1q-LG-guC"/>
+                                <include reference="pLT-az-ZHA"/>
+                                <include reference="vNd-w2-JFE"/>
+                                <exclude reference="GIW-SA-SmW"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.5" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="loadingImage318.jpg" width="540" height="960"/>
+    </resources>
+</document>
