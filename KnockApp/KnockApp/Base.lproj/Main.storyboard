@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingImage318.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="3cg-mH-p9Q">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loadingImg.png" translatesAutoresizingMaskIntoConstraints="NO" id="3cg-mH-p9Q">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
                             </imageView>
-                            <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSj-5d-EjY">
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSj-5d-EjY" customClass="CSAnimationView">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAc-Iq-Ig4">
@@ -37,6 +38,9 @@
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="didTapPad_1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vc3-0k-49H"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HuK-04-LlR">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -48,6 +52,9 @@
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="70" y="0.0" width="70" height="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="didTapPad_2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f88-Yp-Kxx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6za-Gh-RXq">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -59,6 +66,9 @@
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="140" y="0.0" width="70" height="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="didTapPad_3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ihc-4K-CEl"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7V-Z4-7ac">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -70,6 +80,9 @@
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="0.0" y="50" width="70" height="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="didTapPad_4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oAd-l8-2sk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Zt-PF-dPF">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -81,6 +94,9 @@
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="70" y="50" width="70" height="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="didTapPad_5:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRd-F4-4DA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKg-mJ-W2E">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -92,6 +108,9 @@
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="140" y="50" width="70" height="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="didTapPad_6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2kz-hc-C5y"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4AW-ZF-d3q">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -103,6 +122,9 @@
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="0.0" y="100" width="70" height="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="didTapPad_7:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SXu-7w-kZs"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luZ-b4-0hJ">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -114,6 +136,9 @@
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="70" y="100" width="70" height="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="didTapPad_8:" destination="BYZ-38-t0r" eventType="touchUpInside" id="coc-O7-9nM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Atq-10-L5f">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -125,6 +150,9 @@
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                                     <rect key="frame" x="140" y="100" width="70" height="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="didTapPad_9:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2dr-7h-9Hr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLQ-cn-l6u">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -134,8 +162,26 @@
                                                     <color key="titleColor" red="0.92549019610000005" green="0.99607843139999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="0.0" y="150" width="70" height="50"/>
+                                                    <rect key="frame" x="70" y="150" width="70" height="50"/>
                                                 </variation>
+                                                <connections>
+                                                    <action selector="didTapPad_0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eI2-IA-4lc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6f-yd-Vcy">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.0" green="0.78823529410000004" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                                <state key="normal" title="Log out">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="140" y="150" width="70" height="50"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="didTapPad_logout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5sU-ak-TMT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKK-1G-AgP">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -145,19 +191,11 @@
                                                     <color key="titleColor" red="0.92549019610000005" green="0.99607843139999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="70" y="150" width="70" height="50"/>
+                                                    <rect key="frame" x="0.0" y="150" width="70" height="50"/>
                                                 </variation>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I6f-yd-Vcy">
-                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
-                                                <state key="normal" title="Log out">
-                                                    <color key="titleColor" red="0.92549019610000005" green="0.99607843139999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                </state>
-                                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="140" y="150" width="70" height="50"/>
-                                                </variation>
+                                                <connections>
+                                                    <action selector="didTapPad_backspace:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gct-mQ-Ugt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <animations/>
@@ -173,8 +211,8 @@
                                                 <exclude reference="luZ-b4-0hJ"/>
                                                 <exclude reference="Atq-10-L5f"/>
                                                 <exclude reference="QLQ-cn-l6u"/>
-                                                <exclude reference="PKK-1G-AgP"/>
                                                 <exclude reference="I6f-yd-Vcy"/>
+                                                <exclude reference="PKK-1G-AgP"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular-widthClass=compact">
@@ -189,20 +227,25 @@
                                                 <include reference="luZ-b4-0hJ"/>
                                                 <include reference="Atq-10-L5f"/>
                                                 <include reference="QLQ-cn-l6u"/>
-                                                <include reference="PKK-1G-AgP"/>
                                                 <include reference="I6f-yd-Vcy"/>
+                                                <include reference="PKK-1G-AgP"/>
                                             </mask>
                                         </variation>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter 4 digit code to sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEW-5s-JbW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▢▢▢▢" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEW-5s-JbW">
                                         <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                         <animations/>
                                         <color key="backgroundColor" red="0.92549019610000005" green="0.99607843139999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="h4o-0q-7Li"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="h4o-0q-7Li"/>
@@ -228,6 +271,11 @@
                                     <constraint firstAttribute="width" constant="210" id="ZWk-AW-KoB"/>
                                     <constraint firstAttribute="trailing" secondItem="RAc-Iq-Ig4" secondAttribute="trailing" id="dFq-Z8-oUL"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="RAc-Iq-Ig4"/>
@@ -263,85 +311,226 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <button opaque="NO" alpha="0.65000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLp-Tq-AXy">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yj-Pe-hS4" customClass="CSAnimationView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jLp-Tq-AXy">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <animations/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="nl2-sz-atu"/>
+                                            <constraint firstAttribute="width" constant="210" id="zvv-k5-GxK"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="14"/>
+                                        <state key="normal" title="   Log in with Touch ID" image="Touch_ID-512.png">
+                                            <color key="titleColor" red="0.92549019610000005" green="0.99607843139999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="nl2-sz-atu"/>
+                                                <exclude reference="zvv-k5-GxK"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                            <mask key="constraints">
+                                                <exclude reference="nl2-sz-atu"/>
+                                                <exclude reference="zvv-k5-GxK"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="didTapLoginWithTouchID:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iuD-al-F6H"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <animations/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="nl2-sz-atu"/>
-                                    <constraint firstAttribute="width" constant="210" id="zvv-k5-GxK"/>
+                                    <constraint firstAttribute="trailing" secondItem="jLp-Tq-AXy" secondAttribute="trailing" id="4UR-aP-IxG"/>
+                                    <constraint firstAttribute="height" constant="50" id="5N4-oe-lFC"/>
+                                    <constraint firstItem="jLp-Tq-AXy" firstAttribute="top" secondItem="2yj-Pe-hS4" secondAttribute="top" id="7vg-DX-qLK"/>
+                                    <constraint firstAttribute="bottom" secondItem="jLp-Tq-AXy" secondAttribute="bottom" id="9QU-C9-vsk"/>
+                                    <constraint firstAttribute="trailing" secondItem="jLp-Tq-AXy" secondAttribute="trailing" id="FYJ-tK-wPr"/>
+                                    <constraint firstItem="jLp-Tq-AXy" firstAttribute="top" secondItem="2yj-Pe-hS4" secondAttribute="top" id="Hda-L7-eni"/>
+                                    <constraint firstItem="jLp-Tq-AXy" firstAttribute="leading" secondItem="2yj-Pe-hS4" secondAttribute="leading" id="IRc-UD-si0"/>
+                                    <constraint firstItem="jLp-Tq-AXy" firstAttribute="leading" secondItem="2yj-Pe-hS4" secondAttribute="leading" id="lrU-hu-cDP"/>
+                                    <constraint firstAttribute="bottom" secondItem="jLp-Tq-AXy" secondAttribute="bottom" id="qyW-f3-YVY"/>
+                                    <constraint firstAttribute="width" constant="210" id="xBb-k9-HpJ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
-                                <state key="normal" title="Log in with Touch ID">
-                                    <color key="titleColor" red="0.92549019610000005" green="0.99607843139999996" blue="0.89019607840000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="jLp-Tq-AXy"/>
+                                    </mask>
                                     <mask key="constraints">
-                                        <exclude reference="nl2-sz-atu"/>
-                                        <exclude reference="zvv-k5-GxK"/>
+                                        <exclude reference="5N4-oe-lFC"/>
+                                        <exclude reference="xBb-k9-HpJ"/>
+                                        <exclude reference="4UR-aP-IxG"/>
+                                        <exclude reference="7vg-DX-qLK"/>
+                                        <exclude reference="9QU-C9-vsk"/>
+                                        <exclude reference="FYJ-tK-wPr"/>
+                                        <exclude reference="Hda-L7-eni"/>
+                                        <exclude reference="IRc-UD-si0"/>
+                                        <exclude reference="lrU-hu-cDP"/>
+                                        <exclude reference="qyW-f3-YVY"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="jLp-Tq-AXy"/>
+                                    </mask>
                                     <mask key="constraints">
-                                        <include reference="nl2-sz-atu"/>
-                                        <include reference="zvv-k5-GxK"/>
+                                        <include reference="5N4-oe-lFC"/>
+                                        <include reference="xBb-k9-HpJ"/>
+                                        <exclude reference="4UR-aP-IxG"/>
+                                        <exclude reference="7vg-DX-qLK"/>
+                                        <exclude reference="9QU-C9-vsk"/>
+                                        <include reference="FYJ-tK-wPr"/>
+                                        <include reference="Hda-L7-eni"/>
+                                        <exclude reference="IRc-UD-si0"/>
+                                        <include reference="lrU-hu-cDP"/>
+                                        <include reference="qyW-f3-YVY"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <action selector="didTapLoginWithTouchID:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iuD-al-F6H"/>
-                                </connections>
-                            </button>
+                            </view>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zdi-g6-0ZO" customClass="CSAnimationView">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter 4-digit code to sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AEB-hZ-tKz">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.78823529411764703" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="AEB-hZ-tKz" firstAttribute="top" secondItem="zdi-g6-0ZO" secondAttribute="top" id="0hY-7g-Cyv"/>
+                                    <constraint firstAttribute="bottom" secondItem="AEB-hZ-tKz" secondAttribute="bottom" id="Hgj-Wp-GaP"/>
+                                    <constraint firstAttribute="trailing" secondItem="AEB-hZ-tKz" secondAttribute="trailing" id="SYZ-XJ-Riv"/>
+                                    <constraint firstItem="AEB-hZ-tKz" firstAttribute="leading" secondItem="zdi-g6-0ZO" secondAttribute="leading" id="SbN-i3-CAu"/>
+                                    <constraint firstAttribute="width" constant="210" id="UXO-Lf-qtu"/>
+                                    <constraint firstAttribute="height" constant="34" id="svs-dW-BJM"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="AEB-hZ-tKz"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="UXO-Lf-qtu"/>
+                                        <exclude reference="svs-dW-BJM"/>
+                                        <exclude reference="0hY-7g-Cyv"/>
+                                        <exclude reference="Hgj-Wp-GaP"/>
+                                        <exclude reference="SYZ-XJ-Riv"/>
+                                        <exclude reference="SbN-i3-CAu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="AEB-hZ-tKz"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="UXO-Lf-qtu"/>
+                                        <include reference="svs-dW-BJM"/>
+                                        <include reference="0hY-7g-Cyv"/>
+                                        <include reference="Hgj-Wp-GaP"/>
+                                        <include reference="SYZ-XJ-Riv"/>
+                                        <include reference="SbN-i3-CAu"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="zdi-g6-0ZO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="75" id="1vr-sg-N1f">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="2yj-Pe-hS4" firstAttribute="top" secondItem="wSj-5d-EjY" secondAttribute="bottom" constant="8" id="8bY-O2-Rx9"/>
                             <constraint firstItem="wSj-5d-EjY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Isb-L3-NVo"/>
                             <constraint firstItem="3cg-mH-p9Q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MYc-Li-xmZ"/>
-                            <constraint firstItem="jLp-Tq-AXy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OJO-l0-mLj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2yj-Pe-hS4" secondAttribute="bottom" constant="200" id="Wzw-L5-FkQ">
+                                <variation key="heightClass=regular-widthClass=compact" constant="80"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="zdi-g6-0ZO" secondAttribute="trailing" constant="75" id="XaN-eg-00g">
+                                <variation key="heightClass=regular-widthClass=compact" constant="30"/>
+                            </constraint>
                             <constraint firstItem="wSj-5d-EjY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XrP-4m-v1k"/>
+                            <constraint firstItem="2yj-Pe-hS4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aB1-yn-dJ1"/>
                             <constraint firstItem="3cg-mH-p9Q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cTU-SH-Wn5"/>
-                            <constraint firstItem="jLp-Tq-AXy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cXc-au-iOf"/>
+                            <constraint firstItem="zdi-g6-0ZO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="etr-A7-y1M"/>
+                            <constraint firstItem="wSj-5d-EjY" firstAttribute="top" secondItem="zdi-g6-0ZO" secondAttribute="bottom" constant="8" id="h9N-qn-Sil">
+                                <variation key="heightClass=regular-widthClass=compact" constant="20"/>
+                            </constraint>
                             <constraint firstItem="3cg-mH-p9Q" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="uni-eG-nkb"/>
                             <constraint firstAttribute="trailing" secondItem="3cg-mH-p9Q" secondAttribute="trailing" id="utx-Vc-bhl"/>
-                            <constraint firstItem="jLp-Tq-AXy" firstAttribute="top" secondItem="wSj-5d-EjY" secondAttribute="bottom" constant="8" id="vCB-rT-c9g"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="3cg-mH-p9Q"/>
                                 <exclude reference="wSj-5d-EjY"/>
-                                <exclude reference="jLp-Tq-AXy"/>
+                                <exclude reference="2yj-Pe-hS4"/>
+                                <exclude reference="zdi-g6-0ZO"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="MYc-Li-xmZ"/>
                                 <exclude reference="cTU-SH-Wn5"/>
                                 <exclude reference="uni-eG-nkb"/>
                                 <exclude reference="utx-Vc-bhl"/>
+                                <exclude reference="1vr-sg-N1f"/>
+                                <exclude reference="XaN-eg-00g"/>
+                                <exclude reference="etr-A7-y1M"/>
                                 <exclude reference="Isb-L3-NVo"/>
                                 <exclude reference="XrP-4m-v1k"/>
-                                <exclude reference="OJO-l0-mLj"/>
-                                <exclude reference="cXc-au-iOf"/>
-                                <exclude reference="vCB-rT-c9g"/>
+                                <exclude reference="h9N-qn-Sil"/>
+                                <exclude reference="8bY-O2-Rx9"/>
+                                <exclude reference="aB1-yn-dJ1"/>
+                                <exclude reference="Wzw-L5-FkQ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="3cg-mH-p9Q"/>
                                 <include reference="wSj-5d-EjY"/>
-                                <include reference="jLp-Tq-AXy"/>
+                                <include reference="2yj-Pe-hS4"/>
+                                <include reference="zdi-g6-0ZO"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="MYc-Li-xmZ"/>
                                 <include reference="cTU-SH-Wn5"/>
                                 <include reference="uni-eG-nkb"/>
                                 <include reference="utx-Vc-bhl"/>
-                                <include reference="Isb-L3-NVo"/>
+                                <include reference="1vr-sg-N1f"/>
+                                <include reference="XaN-eg-00g"/>
+                                <include reference="etr-A7-y1M"/>
+                                <exclude reference="Isb-L3-NVo"/>
                                 <include reference="XrP-4m-v1k"/>
-                                <exclude reference="OJO-l0-mLj"/>
-                                <include reference="cXc-au-iOf"/>
-                                <include reference="vCB-rT-c9g"/>
+                                <include reference="h9N-qn-Sil"/>
+                                <include reference="8bY-O2-Rx9"/>
+                                <include reference="aB1-yn-dJ1"/>
+                                <include reference="Wzw-L5-FkQ"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="btnLoginWithTouchID" destination="I6f-yd-Vcy" id="qwV-9T-36U"/>
+                        <outlet property="cSAV_info" destination="zdi-g6-0ZO" id="dzj-lG-4Tp"/>
+                        <outlet property="cSAV_passwordPad" destination="wSj-5d-EjY" id="m1l-YX-afk"/>
+                        <outlet property="cSAV_touchID" destination="2yj-Pe-hS4" id="pPF-kS-p9o"/>
+                        <outlet property="uILbl_enteredPassword" destination="yEW-5s-JbW" id="YQq-A6-SG4"/>
+                        <outlet property="uILbl_info" destination="AEB-hZ-tKz" id="TEA-1A-h6K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -349,6 +538,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="loadingImage318.jpg" width="540" height="960"/>
+        <image name="Touch_ID-512.png" width="37" height="37"/>
+        <image name="loadingImg.png" width="540" height="960"/>
     </resources>
 </document>
