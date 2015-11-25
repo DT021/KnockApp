@@ -41,11 +41,11 @@ enum ViewStatus {
             [self updateCodeLabel:-1];
             [self.btnLoginWithTouchID setTitle:@"Sign up" forState:UIControlStateNormal];
             
-            self.cSAV_passwordPad.type = CSAnimationTypeZoomOut;
+            self.cSAV_passwordPad.type = CSAnimationTypePop;
             self.cSAV_passwordPad.duration = 0.3;
             self.cSAV_passwordPad.delay = 0.0;
             [self.cSAV_passwordPad startCanvasAnimation];
-            self.cSAV_passwordPad.alpha = 0.75;
+            self.cSAV_passwordPad.alpha = 0.90;
             
             self.cSAV_touchID.hidden = YES;
             break;
@@ -58,7 +58,7 @@ enum ViewStatus {
             self.cSAV_passwordPad.duration = 0.3;
             self.cSAV_passwordPad.delay = 0.0;
             [self.cSAV_passwordPad startCanvasAnimation];
-            self.cSAV_passwordPad.alpha = 0.75;
+            self.cSAV_passwordPad.alpha = 0.90;
             
             LAContext *context = [[LAContext alloc] init];
             context.localizedFallbackTitle = @"";
@@ -175,19 +175,19 @@ enum ViewStatus {
         self.cSAV_info.hidden = NO;
         switch (viewStatus) {
             case ViewStatus_unregistered: {
-                self.uILbl_info.text = @"\U0000266B  Enter 4-digit code to sign up";
+                self.uILbl_info.text = @"\U0000266B  SIGN UP: Register with 4-digit code";
                 self.cSAV_info.type = CSAnimationTypeFlash;
                 self.cSAV_info.duration = 0.3;
-                self.cSAV_info.delay = 1;
+                self.cSAV_info.delay = 0.5;
                 [self.cSAV_info startCanvasAnimation];
                 self.cSAV_info.alpha = 0.75;
                 break;
             }
             case ViewStatus_waitingSignin: {
-                self.uILbl_info.text = @"\U0000266B  Enter 4-digit code to log in";
+                self.uILbl_info.text = @"\U0000266B  LOG IN: Enter your 4-digit code";
                 self.cSAV_info.type = CSAnimationTypeFlash;
                 self.cSAV_info.duration = 0.3;
-                self.cSAV_info.delay = 1;
+                self.cSAV_info.delay = 0.5;
                 [self.cSAV_info startCanvasAnimation];
                 self.cSAV_info.alpha = 0.75;
                 break;
