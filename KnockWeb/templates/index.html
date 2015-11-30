@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./static/lib/css//bootstrap.min.css">
+  <link rel="stylesheet" href="./static/lib/css/keen-dashboards.css">
+  <link rel="stylesheet" href="./static/lib/css/dc.css">
+  <link rel="stylesheet" href="./static/css/custom.css">
+
+
+</head>
+<body class="application">
+
+  <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="./">Knock Web App V1.0</a>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="row">
+          <div class="col-sm-16">
+            <div class="chart-wrapper">
+              <div class="chart-title red-theme">
+                QR Code
+              </div>
+              <div class="chart-stage">
+                <div class="chart-stage ">
+                    <img id="qrcode" src="" height="200" width="200" style="display: block; margin-left: auto; margin-right: auto;" />
+                  </div>
+                <div id="cpu-status-row-chart"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="chart-wrapper">
+          <div class="chart-title purple-theme">
+            JSON Data
+          </div>
+          <div class="chart-stage">
+            <label class="the-fix">
+  <textarea id="jsonTextarea" rows="18"></textarea>
+ </label>
+<button type="button" onclick="sendJSON()">Send!</button>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+
+  <hr>
+</div>
+
+<script src="./static/lib/js/jquery.min.js"></script>
+<script src="./static/lib/js/bootstrap.min.js"></script>
+<script src="./static/lib/js/crossfilter.js"></script>
+<script src="./static/lib/js/d3.js"></script>
+<script src="./static/lib/js/dc.js"></script>
+<script src="./static/lib/js/queue.js"></script>
+
+
+<script src="./static/lib/js/keen.min.js"></script>
+<script src='./static/js/myGraphs.js' type='text/javascript'></script>
+<script src='./static/js/graphs-nodebeacon.js' type='text/javascript'></script>
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+    var socket;
+
+  $(document).ready(function(){
+    socket = io.connect('http://' + document.domain + ':' + location.port+'/socketiotest'); 
+
+    socket.on('direction', function(msg) {
+      document.getElementById('qrcode').setAttribute( 'src', 'data:image/png;base64,'+msg.data);
+    });
+  });
+
+  function sendJSON() {
+    console.log(document.getElementById("jsonTextarea").value);
+    socket.emit('jsonData', {
+                jsonData: document.getElementById("jsonTextarea").value
+        });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+#number-projects-nd {
+    font-size: 60px;
+}
+
+#total-donations-nd {
+    font-size: 60px;
+}
+
+.dc-chart g.row text {
+    fill: black;
+    font-size: 12px;
+}
+
+#process-status-row-chart {
+	/*margin-bottom: -40px;*/
+}
+
+
+.chart-wrapper .chart-stage button {
+  background: #3498db;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 6px 14px 6px 14px;
+  border:none !important;
+}
+
+.chart-wrapper .chart-stage button:hover {
+  background: #3cb0fd;
+}
+
+.centerContent {
+	margin: 5px 5px;
+	text-align: center;
+}
+
+.red-theme {
+	background-color: #E45641;
+}
+
+.blue-theme {
+	background-color: #44B3C2;
+}
+.yellow-theme {
+	background-color: #F1A94E;
+}
+.brown-theme {
+	background-color: #5D4C46;
+}
+.gray-theme {
+	background-color: #7B8D8E;
+}
+.purple-theme {
+	background-color: #93648D;
+}
+
+label { padding: 0; marign: 0; display: block; }
+textarea { width: 100%; border: 1px solid #333; padding: 4px; }
+  .the–fix { padding–right: 10px; }

@@ -5,9 +5,14 @@
 //  Created by Fangzhou Sun on 11/24/15.
 //  Copyright © 2015 Fangzhou Sun. All rights reserved.
 //
+//  Test JSON file
+//  https://chart.googleapis.com/chart?cht=qr&chs=512x512&chl=https://dl.dropboxusercontent.com/s/cjvg206lansc1by/task.json?dl=0
+//
 
 #import "QRViewController.h"
 #import "TopicViewController.h"
+#import "AFNetworking.h"
+#import "Device.h"
 
 @interface QRViewController () {
     NSInteger scanStatus;
@@ -33,7 +38,7 @@
     [super viewDidAppear:animated];
     scanStatus=0;
     [self startReading];
-    [self loadBeepSound];
+//    [self loadBeepSound];
     _captureSession = nil;
     
     [self startAnimation];
@@ -197,6 +202,41 @@
     }
 }
 
+-(void)getDataFromURL:(NSString *)dataURL{
+    
+    NSManagedObjectContext* context = [CoreDataHelper managedObjectContext];
+    NSArray* items = [CoreDataHelper fetchEntitiesForClass:[Device class] withPredicate:nil inManagedObjectContext:context];
+    NSString *token = @"";
+    for (Device* device in items){
+        token = device.token;
+    }
+    
+    NSURL *URL=[NSURL URLWithString: [NSString stringWithFormat:@"%@%@", dataURL, token]];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    AFSecurityPolicy* policy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+    [policy setValidatesDomainName:NO];
+    [policy setAllowInvalidCertificates:YES];
+    
+    AFHTTPRequestOperation *downloadRequest = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    downloadRequest.securityPolicy.allowInvalidCertificates = YES;
+    [downloadRequest setSecurityPolicy:policy];
+    
+    [downloadRequest setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSDictionary *dataDic = (NSDictionary *)responseObject;
+//        
+//        NSLog(@"%@", [dataDic objectForKey:@"configs"]);
+        
+        [self dismissViewControllerAnimated:YES completion:nil];
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"file downloading error : %@", [error localizedDescription]);
+    }];
+    
+    // Step 5: begin asynchronous download
+    [downloadRequest start];
+}
+
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
     
     // Check if the metadataObjects array is not nil and it contains at least one object.
@@ -208,8 +248,7 @@
             // stop reading and change the bar button item's title and the flag's value.
             // Everything is done on the main thread.
             
-            
-            NSLog(@"Successfull");
+            NSLog(@"Successfull: %@", [metadataObj stringValue]);
             
             [self performSelectorOnMainThread:@selector(stopReading) withObject:nil waitUntilDone:NO];
             //            [self performSegueWithIdentifier:@"segueToHome" sender:self];
@@ -223,17 +262,21 @@
             scanStatus=1;
             //            TopicViewController *topicViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TopicViewController"];
             //            [self presentViewController:topicViewController animated:YES completion:nil];
-            [self performSelectorOnMainThread:@selector(presentToTopicView) withObject:nil waitUntilDone:NO];
+            
+            [self getDataFromURL: [metadataObj stringValue]];
+//            [self performSelectorOnMainThread:@selector(presentToTopicView) withObject:nil waitUntilDone:NO];
         }
     }
 }
 
-- (void)presentToTopicView {
-    [self dismissViewControllerAnimated:YES completion:nil];
-
-//    TopicViewController *topicViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TopicViewController"];
-//    [self presentViewController:topicViewController animated:YES completion:nil];
-}
+//- (void)presentToTopicView {
+//    [self getDataFromURL: [metadataObj stringValue]];
+//    
+//    
+//
+////    TopicViewController *topicViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TopicViewController"];
+////    [self presentViewController:topicViewController animated:YES completion:nil];
+//}
 
 /*
  #pragma mark - Navigation

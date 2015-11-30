@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A132DC11C0BBC75009C1C13 /* Device+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A132DBE1C0BBC75009C1C13 /* Device+CoreDataProperties.m */; };
+		2A132DC21C0BBC75009C1C13 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A132DC01C0BBC75009C1C13 /* Device.m */; };
+		2A6BA21C1C051A6100C286BE /* bg001@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A6BA21B1C051A6100C286BE /* bg001@2x.jpg */; };
+		2A6BA21E1C051EFC00C286BE /* loginbg@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A6BA21D1C051EFC00C286BE /* loginbg@2x.jpg */; };
+		2A6BA2201C05203100C286BE /* loginbg2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A6BA21F1C05203100C286BE /* loginbg2@2x.jpg */; };
+		2A6BA2231C0521C400C286BE /* loginImageBG@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A6BA2221C0521C400C286BE /* loginImageBG@2x.jpg */; };
+		2A6BA2261C0523B100C286BE /* Arrows-Left-round-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6BA2241C0523B100C286BE /* Arrows-Left-round-icon@2x.png */; };
+		2A6BA2271C0523B100C286BE /* Arrows-Right-round-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6BA2251C0523B100C286BE /* Arrows-Right-round-icon@2x.png */; };
+		2A6BA22B1C052B8400C286BE /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A6BA22A1C052B8400C286BE /* logo@2x.png */; };
+		2A6BA22E1C052CAF00C286BE /* QRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6BA22D1C052CAF00C286BE /* QRViewController.m */; };
+		2A6BA2311C052E1B00C286BE /* TopicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A6BA2301C052E1B00C286BE /* TopicViewController.m */; };
+		2A6BA2331C0533C900C286BE /* beep.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2A6BA2321C0533C900C286BE /* beep.mp3 */; };
+		2A6BA2351C05346600C286BE /* scan.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2A6BA2341C05346600C286BE /* scan.gif */; };
 		2A78D8181BF8F56A00B25F82 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A78D8171BF8F56A00B25F82 /* main.m */; };
 		2A78D81B1BF8F56A00B25F82 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A78D81A1BF8F56A00B25F82 /* AppDelegate.m */; };
 		2A78D81E1BF8F56A00B25F82 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A78D81D1BF8F56A00B25F82 /* ViewController.m */; };
@@ -18,6 +31,10 @@
 		2A78D83F1BF8F56A00B25F82 /* KnockAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A78D83E1BF8F56A00B25F82 /* KnockAppUITests.m */; };
 		2A78D8531BF8F92000B25F82 /* loadingImage2@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2A78D8521BF8F92000B25F82 /* loadingImage2@2x.jpg */; };
 		2A78D8571BF8F9E100B25F82 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A78D8561BF8F9E100B25F82 /* icon@2x.png */; };
+		2AB55CA91C0A90020042E39B /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB55CA81C0A90020042E39B /* CoreDataHelper.m */; };
+		2AB55CAB1C0A90100042E39B /* Device.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 2AB55CAA1C0A90100042E39B /* Device.xcdatamodel */; };
+		2AB55CB01C0A90D10042E39B /* Question+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB55CAD1C0A90D10042E39B /* Question+CoreDataProperties.m */; };
+		2AB55CB11C0A90D10042E39B /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB55CAF1C0A90D10042E39B /* Question.m */; };
 		2ABB06AA1BF94DD200B49CDF /* Touch_ID-512@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABB06A91BF94DD200B49CDF /* Touch_ID-512@2x.png */; };
 		2ABB06AC1BF982ED00B49CDF /* loadingImage3@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2ABB06AB1BF982ED00B49CDF /* loadingImage3@2x.jpg */; };
 		2ABB06AE1BF9835C00B49CDF /* loadingImg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2ABB06AD1BF9835C00B49CDF /* loadingImg@2x.png */; };
@@ -43,6 +60,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A132DBD1C0BBC75009C1C13 /* Device+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Device+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2A132DBE1C0BBC75009C1C13 /* Device+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Device+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2A132DBF1C0BBC75009C1C13 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		2A132DC01C0BBC75009C1C13 /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
+		2A132DC31C0BBD0C009C1C13 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		2A6BA21B1C051A6100C286BE /* bg001@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "bg001@2x.jpg"; sourceTree = "<group>"; };
+		2A6BA21D1C051EFC00C286BE /* loginbg@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "loginbg@2x.jpg"; sourceTree = "<group>"; };
+		2A6BA21F1C05203100C286BE /* loginbg2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "loginbg2@2x.jpg"; sourceTree = "<group>"; };
+		2A6BA2221C0521C400C286BE /* loginImageBG@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "loginImageBG@2x.jpg"; sourceTree = "<group>"; };
+		2A6BA2241C0523B100C286BE /* Arrows-Left-round-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrows-Left-round-icon@2x.png"; sourceTree = "<group>"; };
+		2A6BA2251C0523B100C286BE /* Arrows-Right-round-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Arrows-Right-round-icon@2x.png"; sourceTree = "<group>"; };
+		2A6BA22A1C052B8400C286BE /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		2A6BA22C1C052CAF00C286BE /* QRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRViewController.h; sourceTree = "<group>"; };
+		2A6BA22D1C052CAF00C286BE /* QRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRViewController.m; sourceTree = "<group>"; };
+		2A6BA22F1C052E1B00C286BE /* TopicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopicViewController.h; sourceTree = "<group>"; };
+		2A6BA2301C052E1B00C286BE /* TopicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopicViewController.m; sourceTree = "<group>"; };
+		2A6BA2321C0533C900C286BE /* beep.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep.mp3; sourceTree = "<group>"; };
+		2A6BA2341C05346600C286BE /* scan.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = scan.gif; sourceTree = "<group>"; };
 		2A78D8131BF8F56A00B25F82 /* KnockApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KnockApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A78D8171BF8F56A00B25F82 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2A78D8191BF8F56A00B25F82 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -62,6 +97,13 @@
 		2A78D8401BF8F56A00B25F82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A78D8521BF8F92000B25F82 /* loadingImage2@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "loadingImage2@2x.jpg"; sourceTree = "<group>"; };
 		2A78D8561BF8F9E100B25F82 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		2AB55CA71C0A90020042E39B /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
+		2AB55CA81C0A90020042E39B /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		2AB55CAA1C0A90100042E39B /* Device.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Device.xcdatamodel; sourceTree = "<group>"; };
+		2AB55CAC1C0A90D10042E39B /* Question+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Question+CoreDataProperties.h"; sourceTree = "<group>"; };
+		2AB55CAD1C0A90D10042E39B /* Question+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Question+CoreDataProperties.m"; sourceTree = "<group>"; };
+		2AB55CAE1C0A90D10042E39B /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		2AB55CAF1C0A90D10042E39B /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 		2ABB06A91BF94DD200B49CDF /* Touch_ID-512@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Touch_ID-512@2x.png"; sourceTree = "<group>"; };
 		2ABB06AB1BF982ED00B49CDF /* loadingImage3@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "loadingImage3@2x.jpg"; sourceTree = "<group>"; };
 		2ABB06AD1BF9835C00B49CDF /* loadingImg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loadingImg@2x.png"; sourceTree = "<group>"; };
@@ -97,6 +139,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A6BA2211C0521B000C286BE /* QRCode */ = {
+			isa = PBXGroup;
+			children = (
+				2A6BA22A1C052B8400C286BE /* logo@2x.png */,
+				2A6BA2241C0523B100C286BE /* Arrows-Left-round-icon@2x.png */,
+				2A6BA2251C0523B100C286BE /* Arrows-Right-round-icon@2x.png */,
+				2A6BA2221C0521C400C286BE /* loginImageBG@2x.jpg */,
+			);
+			name = QRCode;
+			sourceTree = "<group>";
+		};
+		2A6BA2361C05346A00C286BE /* AppResources */ = {
+			isa = PBXGroup;
+			children = (
+				2A6BA2341C05346600C286BE /* scan.gif */,
+				2A6BA2321C0533C900C286BE /* beep.mp3 */,
+			);
+			name = AppResources;
+			sourceTree = "<group>";
+		};
 		2A78D80A1BF8F56A00B25F82 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +184,8 @@
 		2A78D8151BF8F56A00B25F82 /* KnockApp */ = {
 			isa = PBXGroup;
 			children = (
+				2AB55CA61C0A8FF50042E39B /* Data Model */,
+				2A6BA2361C05346A00C286BE /* AppResources */,
 				2A78D84C1BF8F6CA00B25F82 /* Images */,
 				2A78D8191BF8F56A00B25F82 /* AppDelegate.h */,
 				2A78D81A1BF8F56A00B25F82 /* AppDelegate.m */,
@@ -133,6 +197,10 @@
 				2A78D82A1BF8F56A00B25F82 /* Info.plist */,
 				2A78D8221BF8F56A00B25F82 /* KnockApp.xcdatamodeld */,
 				2A78D8161BF8F56A00B25F82 /* Supporting Files */,
+				2A6BA22C1C052CAF00C286BE /* QRViewController.h */,
+				2A6BA22D1C052CAF00C286BE /* QRViewController.m */,
+				2A6BA22F1C052E1B00C286BE /* TopicViewController.h */,
+				2A6BA2301C052E1B00C286BE /* TopicViewController.m */,
 			);
 			path = KnockApp;
 			sourceTree = "<group>";
@@ -166,6 +234,7 @@
 		2A78D84C1BF8F6CA00B25F82 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				2A6BA2211C0521B000C286BE /* QRCode */,
 				2ABB06A81BF94DC700B49CDF /* Login */,
 				2A78D84D1BF8F6D400B25F82 /* Loading */,
 			);
@@ -183,11 +252,33 @@
 			name = Loading;
 			sourceTree = "<group>";
 		};
+		2AB55CA61C0A8FF50042E39B /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				2A132DC31C0BBD0C009C1C13 /* PrefixHeader.pch */,
+				2A132DBD1C0BBC75009C1C13 /* Device+CoreDataProperties.h */,
+				2A132DBE1C0BBC75009C1C13 /* Device+CoreDataProperties.m */,
+				2A132DBF1C0BBC75009C1C13 /* Device.h */,
+				2A132DC01C0BBC75009C1C13 /* Device.m */,
+				2AB55CAC1C0A90D10042E39B /* Question+CoreDataProperties.h */,
+				2AB55CAD1C0A90D10042E39B /* Question+CoreDataProperties.m */,
+				2AB55CAE1C0A90D10042E39B /* Question.h */,
+				2AB55CAF1C0A90D10042E39B /* Question.m */,
+				2AB55CAA1C0A90100042E39B /* Device.xcdatamodel */,
+				2AB55CA71C0A90020042E39B /* CoreDataHelper.h */,
+				2AB55CA81C0A90020042E39B /* CoreDataHelper.m */,
+			);
+			name = "Data Model";
+			sourceTree = "<group>";
+		};
 		2ABB06A81BF94DC700B49CDF /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2A6BA21B1C051A6100C286BE /* bg001@2x.jpg */,
 				2ABB06AF1BF98E2F00B49CDF /* info34@2x.png */,
 				2ABB06A91BF94DD200B49CDF /* Touch_ID-512@2x.png */,
+				2A6BA21D1C051EFC00C286BE /* loginbg@2x.jpg */,
+				2A6BA21F1C05203100C286BE /* loginbg2@2x.jpg */,
 			);
 			name = Login;
 			sourceTree = "<group>";
@@ -279,6 +370,7 @@
 				TargetAttributes = {
 					2A78D8121BF8F56A00B25F82 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = LRRM2UVXWJ;
 					};
 					2A78D82E1BF8F56A00B25F82 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -317,11 +409,20 @@
 			files = (
 				2ABB06AC1BF982ED00B49CDF /* loadingImage3@2x.jpg in Resources */,
 				2ABB06AE1BF9835C00B49CDF /* loadingImg@2x.png in Resources */,
+				2A6BA2261C0523B100C286BE /* Arrows-Left-round-icon@2x.png in Resources */,
+				2A6BA2331C0533C900C286BE /* beep.mp3 in Resources */,
+				2A6BA2231C0521C400C286BE /* loginImageBG@2x.jpg in Resources */,
 				2A78D8531BF8F92000B25F82 /* loadingImage2@2x.jpg in Resources */,
+				2A6BA21E1C051EFC00C286BE /* loginbg@2x.jpg in Resources */,
+				2A6BA2351C05346600C286BE /* scan.gif in Resources */,
+				2A6BA2271C0523B100C286BE /* Arrows-Right-round-icon@2x.png in Resources */,
+				2A6BA22B1C052B8400C286BE /* logo@2x.png in Resources */,
 				2A78D8291BF8F56A00B25F82 /* LaunchScreen.storyboard in Resources */,
 				2A78D8261BF8F56A00B25F82 /* Assets.xcassets in Resources */,
 				2ABB06AA1BF94DD200B49CDF /* Touch_ID-512@2x.png in Resources */,
 				2A78D8211BF8F56A00B25F82 /* Main.storyboard in Resources */,
+				2A6BA2201C05203100C286BE /* loginbg2@2x.jpg in Resources */,
+				2A6BA21C1C051A6100C286BE /* bg001@2x.jpg in Resources */,
 				2A78D8571BF8F9E100B25F82 /* icon@2x.png in Resources */,
 				2ABB06B01BF98E2F00B49CDF /* info34@2x.png in Resources */,
 			);
@@ -398,8 +499,16 @@
 			files = (
 				2A78D8241BF8F56A00B25F82 /* KnockApp.xcdatamodeld in Sources */,
 				2A78D81E1BF8F56A00B25F82 /* ViewController.m in Sources */,
+				2A132DC11C0BBC75009C1C13 /* Device+CoreDataProperties.m in Sources */,
+				2A132DC21C0BBC75009C1C13 /* Device.m in Sources */,
+				2A6BA2311C052E1B00C286BE /* TopicViewController.m in Sources */,
+				2A6BA22E1C052CAF00C286BE /* QRViewController.m in Sources */,
 				2A78D81B1BF8F56A00B25F82 /* AppDelegate.m in Sources */,
 				2A78D8181BF8F56A00B25F82 /* main.m in Sources */,
+				2AB55CB01C0A90D10042E39B /* Question+CoreDataProperties.m in Sources */,
+				2AB55CB11C0A90D10042E39B /* Question.m in Sources */,
+				2AB55CAB1C0A90100042E39B /* Device.xcdatamodel in Sources */,
+				2AB55CA91C0A90020042E39B /* CoreDataHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,10 +648,15 @@
 			baseConfigurationReference = D77764CBB562D0C0535D965A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Fangzhou Sun (2EWZL97NBD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fangzhou Sun (2EWZL97NBD)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = KnockApp/PrefixHeader.pch;
 				INFOPLIST_FILE = KnockApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangzhou.KnockApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3a800df0-d9a9-4233-99b4-ea94f0957638";
 			};
 			name = Debug;
 		};
@@ -551,10 +665,15 @@
 			baseConfigurationReference = BE5246B622BA20669A7A0B4A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Fangzhou Sun (2EWZL97NBD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Fangzhou Sun (2EWZL97NBD)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = KnockApp/PrefixHeader.pch;
 				INFOPLIST_FILE = KnockApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fangzhou.KnockApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3a800df0-d9a9-4233-99b4-ea94f0957638";
 			};
 			name = Release;
 		};

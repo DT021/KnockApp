@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Device.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +18,45 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UIUserNotificationType types = UIUserNotificationTypeBadge |
+    UIUserNotificationTypeSound | UIUserNotificationTypeAlert;
+    
+    UIUserNotificationSettings *mySettings =
+    [UIUserNotificationSettings settingsForTypes:types categories:nil];
+    
+    [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
+    
     sleep(0);
     return YES;
+}
+
+-(void) application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    UIApplicationState state = [application applicationState];
+    // user tapped notification while app was in background
+    if (state == UIApplicationStateInactive || state == UIApplicationStateBackground) {
+        NSLog(@"UIApplicationStateInactive");
+        // go to screen relevant to Notification content
+    } else {
+        NSLog(@"UIApplicationStateActive");
+        // App is in UIApplicationStateActive (running in foreground)
+        // perhaps show an UIAlertView
+    }
+}
+
+- (void)application:(UIApplication *)app didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSString *token = [[deviceToken description] stringByTrimmingCharactersInSet: [NSCharacterSet characterSetWithCharactersInString:@"<>"]];
+    token = [token stringByReplacingOccurrencesOfString:@" " withString:@""];
+    
+    NSManagedObjectContext* context = [CoreDataHelper managedObjectContext];
+    
+    Device* device = [CoreDataHelper insertManagedObjectOfClass:[Device class] inManagedObjectContext:context];
+    device.token = token;
+    
+    [CoreDataHelper saveManagedObjectContext:context];
+    NSLog(@"content---%@", token);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -42,9 +80,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     // Saves changes in the application's managed object context before the application terminates.
-    [self saveContext];
+//    [self saveContext];
 }
 
+/*
 #pragma mark - Core Data stack
 
 @synthesize managedObjectContext = _managedObjectContext;
@@ -124,5 +163,6 @@
         }
     }
 }
+*/
 
 @end
