@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnLoginWithTouchID;
 @property (weak, nonatomic) IBOutlet CSAnimationView *cSAV_info;
 @property (weak, nonatomic) IBOutlet UILabel *uILbl_info;
+@property (weak, nonatomic) IBOutlet UIButton *uIButton_touchID;
 
 @end
 

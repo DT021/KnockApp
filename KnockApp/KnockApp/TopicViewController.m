@@ -9,6 +9,7 @@
 #import "TopicViewController.h"
 #import "QRViewController.h"
 #import "AFNetworking.h"
+#import "StatusView.h"
 
 enum ViewStatus {
     ViewStatus_original,
@@ -20,6 +21,7 @@ enum ViewStatus {
     enum ViewStatus viewStatus;
     UILabel *uILabel_answerResponse;
     NSArray *configs;
+    StatusView *statusView;
 }
 
 @end
@@ -30,7 +32,8 @@ enum ViewStatus {
     [super viewDidLoad];
     self.cSAV_view.alpha = 0;
     // Do any additional setup after loading the view.
-    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reloadTable:) name:@"reloadQuestionTable" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appWillEnterForeground) name:@"appWillEnterForeground" object:nil];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -41,6 +44,11 @@ enum ViewStatus {
     [self getQuestions];
     
     [self startAnimation];
+}
+
+- (void)appWillEnterForeground {
+    [self getQuestions];
+    [self performSelector:@selector(startAnimation) withObject:nil afterDelay:0.4];
 }
 
 - (void)startAnimation {
@@ -54,6 +62,14 @@ enum ViewStatus {
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)reloadTable:(NSNotification *)notification
+{
+    statusView = [[StatusView alloc] initWithText:@"You have a new question to answer." delayToHide:2.2 iconIndex:1];
+    [self.view addSubview:statusView];
+    
+    [self getQuestions];
 }
 
 -(void)getQuestions {
@@ -147,7 +163,7 @@ enum ViewStatus {
         }
         
         NSInteger data_type = [[[configs objectAtIndex:0] objectForKey:@"data_type"] integerValue];
-        if (data_type==1 || data_type==4) {
+        if (data_type==1 || data_type==4 || data_type==7) {
             CGRect textareaRectangle = CGRectMake(alignment_horizontal, height_question+alignment_vertical_padding, viewWidth-2*alignment_horizontal, height_textarea);
             UITextField *textField = [[UITextField alloc] initWithFrame:textareaRectangle];
             textField.borderStyle = UITextBorderStyleNone;

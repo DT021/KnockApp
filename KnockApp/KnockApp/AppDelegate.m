@@ -40,8 +40,7 @@
         // go to screen relevant to Notification content
     } else {
         NSLog(@"UIApplicationStateActive");
-        // App is in UIApplicationStateActive (running in foreground)
-        // perhaps show an UIAlertView
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"reloadQuestionTable" object:nil];
     }
 }
 
@@ -71,6 +70,7 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"appWillEnterForeground" object:nil];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

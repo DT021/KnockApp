@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import <LocalAuthentication/LocalAuthentication.h>
 #import "TopicViewController.h"
+#import "KeychainUserPass.h"
 
 enum ViewStatus {
     ViewStatus_unregistered,
@@ -31,7 +32,10 @@ enum ViewStatus {
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [self checkIfTouchIDAvailable];
     viewStatus = ViewStatus_unregistered;
+    if ([KeychainUserPass load:@"userpassword"])
+        viewStatus = ViewStatus_waitingSignin;
     [self UpdateViewByViewStatus];
 }
 
@@ -73,10 +77,21 @@ enum ViewStatus {
             } else {
                 self.cSAV_touchID.hidden = YES;
             }
+            [self authenicateUser];
             break;
         }
         default:
             break;
+    }
+}
+
+- (void)checkIfTouchIDAvailable {
+    LAContext *context = [[LAContext alloc] init];
+    context.localizedFallbackTitle = @"";
+    NSError *error = nil;
+    if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+    } else {
+        self.uIButton_touchID.enabled = NO;
     }
 }
 
@@ -109,16 +124,17 @@ enum ViewStatus {
                               
                           }];
         
-    } else {
-        
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                                        message:@"Your device cannot authenticate using TouchID."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"Ok"
-                                              otherButtonTitles:nil];
-        [alert show];
-        
     }
+//    else {
+//        
+//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+//                                                        message:@"Your device cannot authenticate using TouchID."
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"Ok"
+//                                              otherButtonTitles:nil];
+//        [alert show];
+//        
+//    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -224,13 +240,39 @@ enum ViewStatus {
         }
     }
     self.uILbl_enteredPassword.text = stringToDisplay;
+    
+//    NSLog(@"%@, %@", self.uILbl_enteredPassword.text, [KeychainUserPass load:@"userpassword"]);
+    // Auto login
+    if (viewStatus==ViewStatus_waitingSignin) {
+        if (enteredCodeStr.length==4) {
+            if ([enteredCodeStr isEqualToString:[KeychainUserPass load:@"userpassword"]]) {
+                TopicViewController *topicViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TopicViewController"];
+                [self presentViewController:topicViewController animated:YES completion:nil];
+            } else {
+                self.cSAV_info.hidden = NO;
+                self.uILbl_info.text = @"\U0000266B  WARNING: Wrong password.";
+                self.cSAV_info.type = CSAnimationTypeFlash;
+                self.cSAV_info.duration = 0.3;
+                self.cSAV_info.delay = 0.1;
+                [self.cSAV_info startCanvasAnimation];
+                self.cSAV_info.alpha = 0.75;
+            }
+            
+        }
+    }
 }
 
 - (IBAction)didTapPad_logout:(id)sender {
     if (viewStatus==ViewStatus_unregistered) {
-        viewStatus = ViewStatus_waitingSignin;
+        if (enteredCodeStr.length==4) {
+            viewStatus = ViewStatus_waitingSignin;
+            [KeychainUserPass delete:@"userpassword"];
+            [KeychainUserPass save:@"userpassword" data:enteredCodeStr];
+        }
+        
     } else if (viewStatus==ViewStatus_waitingSignin) {
         viewStatus = ViewStatus_unregistered;
+        [KeychainUserPass delete:@"userpassword"];
     }
     
     [self UpdateViewByViewStatus];
