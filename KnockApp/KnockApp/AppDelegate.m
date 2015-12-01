@@ -28,7 +28,7 @@
     [[UIApplication sharedApplication] registerUserNotificationSettings:mySettings];
     [[UIApplication sharedApplication] registerForRemoteNotifications];
     
-    sleep(0);
+    sleep(2);
     return YES;
 }
 

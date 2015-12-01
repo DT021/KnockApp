@@ -38,7 +38,7 @@
     [super viewDidAppear:animated];
     scanStatus=0;
     [self startReading];
-//    [self loadBeepSound];
+    [self loadBeepSound];
     _captureSession = nil;
     
     [self startAnimation];
@@ -111,7 +111,7 @@
     */
     
     
-    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
+//    dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void){
         //Background Thread
         NSError *error;
         
@@ -152,7 +152,7 @@
         // Start video capture.
         [_captureSession startRunning];
         
-        dispatch_async(dispatch_get_main_queue(), ^(void){
+//        dispatch_async(dispatch_get_main_queue(), ^(void){
             //Run UI Updates
             
             [_viewPreview.layer addSublayer:_videoPreviewLayer];
@@ -165,8 +165,8 @@
             webView.opaque = NO;
             [webView loadData:gifData MIMEType:@"image/gif" textEncodingName:nil baseURL:nil];
             [_viewPreview addSubview:webView];
-        });
-    });
+//        });
+//    });
     
     return YES;
 }
@@ -211,7 +211,8 @@
         token = device.token;
     }
     
-    NSURL *URL=[NSURL URLWithString: [NSString stringWithFormat:@"%@%@", dataURL, token]];
+//    NSURL *URL=[NSURL URLWithString: [NSString stringWithFormat:@"%@%@", dataURL, token]];
+    NSURL *URL=[NSURL URLWithString: [NSString stringWithFormat:@"%@%@", @"http://10.67.152.111:5000/device?token=", token]];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:URL];
     AFSecurityPolicy* policy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
@@ -251,7 +252,7 @@
             NSLog(@"Successfull: %@", [metadataObj stringValue]);
             
             [self performSelectorOnMainThread:@selector(stopReading) withObject:nil waitUntilDone:NO];
-            //            [self performSegueWithIdentifier:@"segueToHome" sender:self];
+            
             if (_audioPlayer) {
                 if (_audioPlayer.isPlaying == YES || scanStatus==1)
                     scanStatus=1;

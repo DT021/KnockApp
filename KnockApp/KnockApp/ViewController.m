@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import <LocalAuthentication/LocalAuthentication.h>
+#import "TopicViewController.h"
 
 enum ViewStatus {
     ViewStatus_unregistered,
@@ -95,6 +96,10 @@ enum ViewStatus {
                               
                               if (success) {
                                   NSLog(@"success");
+                                  dispatch_async(dispatch_get_main_queue(), ^(void){
+                                      TopicViewController *topicViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"TopicViewController"];
+                                      [self presentViewController:topicViewController animated:YES completion:nil];
+                                  });
                                   return;
                                   
                               } else {
